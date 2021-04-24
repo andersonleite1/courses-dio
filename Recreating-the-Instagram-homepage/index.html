@@ -9,39 +9,75 @@
   <title>Instagram</title>
 </head>
 <body>
-  <div class="instagram-wrapper">
-    <div class="instagram-phone">
-      <img src="./assets/images/smartphones.png" alt="Imagens de celurares acessando Instagram">
+  <div class="container">
+    <div class="instagram-wrapper">
+      <div class="instagram-phone">
+        <img src="./assets/images/smartphones.png" alt="Imagens de celurares acessando Instagram">
+      </div>
+      <div class="instagram-continue">
+        <div class="group">
+          <img src="./assets/images/instagram-logo.png" class="logo-instagram" alt="Logo Instagram">
+          <div class="profile-photo">
+            <img src="./assets/images/perfil.png" alt="Imagem de perfil Anderson">
+          </div>
+          <a href="#" class="instagram-login">Continue como anderson.sleite</a>
+          <a href="#" class="instagram-logout">Remover conta</a>
+        </div>
+        <div class="group">
+          <p class="not-acount">Não é anderson.sleite?</p>
+          <p class="notaccount">
+            <span class="link-blue">Alterar conta</span>
+            ou
+            <span class="link-blue">Inscreva-se</span>
+          </p>
+        </div>
+        <div class="get-the-app">
+          <p class="get-app">Baixe o aplicativo</p>
+          <div class="download">
+            <a href="#" class="app-download">
+            </a>
+            <a href="#" class="app-download">
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="instagram-continue">
-      <div class="group">
-        <img src="./assets/images/instagram-logo.png" class="logo-instagram" alt="Logo Instagram">
-        <div class="profile-photo">
-          <img src="./assets/images/perfil.png" alt="Imagem de perfil Anderson">
-        </div>
-        <a href="#" class="instagram-login">Continue como anderson.sleite</a>
-        <a href="#" class="instagram-logout">Remover conta</a>
-      </div>
-      <div class="group">
-        <p class="not-acount">Não é anderson.sleite?</p>
-        <p class="notaccount">
-          <span class="link-blue">Alterar conta</span>
-          ou
-          <span class="link-blue">Inscreva-se</span>
-        </p>
-      </div>
-      <div class="get-the-app">
-        <p class="get-app">Baixe o aplicativo</p>
-        <div class="download">
-          <a href="#" class="app-download">
-            <!-- <img src="./assets/images/app-store-icon.png" alt="App Store"> -->
-          </a>
-          <a href="#" class="app-download">
-            <!-- <img src="./assets/images/play-store-icon.png" alt="Play Store"> -->
-          </a>
-        </div>
+    <div class="darkmode">
+      <div class="lamp-icon">
+        <img src="./assets/images/lightbulb.png" alt="Lampada ligada">
       </div>
     </div>
   </div>
+  
+  <script>
+    const lamp = document.querySelector(".darkmode img");
+    console.log(lamp)
+
+    lamp.addEventListener('click', () => {
+      const container = document.querySelector(".container");
+      const instagram = document.querySelector(".logo-instagram");
+      const p = document.querySelectorAll("p");
+
+      if(container.classList.contains("dark")) {
+        container.classList.remove("dark");
+        lamp.src = "./assets/images/lightbulb.png";
+        instagram.src = "./assets/images/instagram-logo.png";
+
+        for(let i = 0; i < p.length; i++) {
+          p[i].style.color = "#000";
+        }
+
+      } else {
+        container.classList.add("dark");
+        lamp.src = "./assets/images/lightbulb-off.png";
+        instagram.src = "./assets/images/instagram-logo-light.png";
+
+        for(let i = 0; i < p.length; i++) {
+          p[i].style.color = "#fff";
+        }
+      }
+
+    });
+  </script>
 </body>
 </html>
