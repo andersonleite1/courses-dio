@@ -4,7 +4,7 @@ Esse projeto faz parte do **Bootcamp** **HTML Web Developer** da[ Digital Innova
 
 
 
-![Instagram](D:\Projects\www\dio\courses-dio\Recreating-the-Instagram-homepage\assets\images\Instagram.gif)
+![Clone Homepage Instagram](https://github.com/andersonleite1/courses-dio/blob/main/Recreating-the-Instagram-homepage/assets/images/Instagram.gif)
 
 
 
